@@ -1,3 +1,5 @@
+# Valores padrão para parâmetros em funções Python + NoneType e None
+
 # 0 é um false value
 # Por isso eu uso None, pois a pessoa podia passar 0 mas n ia ser printado
 # Neste caso eu testo se estou ou não recebendo o "z"
