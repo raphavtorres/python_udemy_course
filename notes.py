@@ -22,3 +22,16 @@ new_list = [
     for x in range(3)
 ]
 print(new_list)
+
+
+
+
+
+# REVIEW HOW THIS CODE WORKS
+string = "Raphael Valderrama Torres"
+letters_amount = 2
+new_string = '.'.join([
+    string[index:index + letters_amount]
+    for index in range(0, len(string), letters_amount)
+])
+print(new_string)
