@@ -1,1 +1,5 @@
-notes
+import pprint  # pretty print
+def p(v):
+    pprint.pprint(v, sort_dicts=False, width=60)
+    
+    
