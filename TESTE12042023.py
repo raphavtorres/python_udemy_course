@@ -73,3 +73,29 @@ with open(path_file, 'a') as file:
 # Using encoding
 with open(path_file, 'w', encoding='utf8') as file:
     file.write('Atenção')
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+# os.remove, os.unlink, os.rename
+import os
+
+path_file = 'C:\\Users\\ct67ca\\Desktop\\pyhtonTorres\\'
+path_file += 'file.txt'
+
+with open(path_file, 'w', encoding='utf8') as file:
+    file.write('Atenção')
+
+# Both do the same thing
+os.remove(path_file)
+os.unlink(path_file)
+
+# to rename or move file
+os.rename(path_file, 'file_renamed.txt')     
