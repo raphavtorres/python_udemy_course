@@ -50,3 +50,26 @@ print('-' * 40)
 
 with open(path_file, 'r') as file:
     print(file.read())
+    
+    
+    
+    
+    
+    
+    
+    
+path_file = 'C:\\Users\\ct67ca\\Desktop\\pyhtonTorres\\'
+path_file += 'file.txt'
+
+# MODOS DE ABERTURA DE ARQUIVO E ENCODING COM WITH OPEN
+# w --> deletes the file content and write something new
+with open(path_file, 'w') as file:
+    ...
+
+# a --> adds new content (good to creating log files)
+with open(path_file, 'a') as file:
+    ...
+
+# Using encoding
+with open(path_file, 'w', encoding='utf8') as file:
+    file.write('Atenção')
