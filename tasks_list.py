@@ -1,6 +1,7 @@
 import os
 
-tasks_list = ['teste1', 'teste2']
+tasks_list = []
+trash_list = []
 
 
 def list_tasks():
@@ -10,38 +11,47 @@ def list_tasks():
 
 
 def undo_task():
-    if len(tasks_list) == 0:
+    if len(tasks_list) != 0:
+        trash_list.append(tasks_list[-1])
+        tasks_list.pop(-1)
+    else:
         print("No tasks to undo")
-    print('Undoing')
 
 
 def redo_task():
-    
+    if len(trash_list) != 0 and trash_list[-1] not in tasks_list:
+        tasks_list.append(trash_list[-1])
+        trash_list.pop(-1)
+    else:
+        print("No tasks to redo")
 
-    print('Redoing')
+
+def perm_delete():
+    ...
 
 
 def test_user_input(user_input):
     if user_input == 'list':
         list_tasks()
     elif user_input == 'undo':
-        undo_task(user_input)
+        undo_task()
     elif user_input == 'redo':
-        redo_task()       
+        redo_task()
     elif user_input == 'clear':
-         os.system('cls')
+        os.system('cls')
+    elif user_input == 'delete':
+        print('deleting')
     else:
         tasks_list.append(user_input)
-        
 
 
 def main():
     while True:
-        prev_list = [task for task in tasks_list]
-        print("Commands: list, undo, redo, clear, exit")
+        print(f'{tasks_list=}\n{trash_list=}')
+        print("Commands: list, undo, redo, clear, delete, exit")
         try:
             user_input = input("Type a task or command >> ").lower().strip()
-        except:
+        except ValueError:
             print('invalid input...')
             continue
         if user_input == 'exit': 
