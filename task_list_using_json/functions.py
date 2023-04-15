@@ -14,7 +14,6 @@ def write_json(obj):
 
 
 def read_json():
-    # TEST IF FILE NOT EMPTY
     with open(path_file, 'r', encoding='utf8') as file:
         tasks = json.load(file)
     return tasks
