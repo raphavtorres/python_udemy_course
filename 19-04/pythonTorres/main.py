@@ -1,6 +1,7 @@
 from Manufacturer import Manufacturer
 
 manufacturer_1 = Manufacturer("Land Rover")
-manufacturer_1.insert_car("Velar")
-manufacturer_1.insert_car("Evoque")
+valar = manufacturer_1.insert_car("Velar")
+evoque = manufacturer_1.insert_car("Evoque")
+engi
 manufacturer_1.list_cars()

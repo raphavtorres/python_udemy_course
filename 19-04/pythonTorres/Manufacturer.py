@@ -7,7 +7,9 @@ class Manufacturer:
         self.cars = []
 
     def insert_car(self, car_name):
-        self.cars.append(Car(car_name))
+        car = Car(car_name)
+        self.cars.append(car)
+        return car
 
     def list_cars(self):
         print("Manufacturer: ", self.name)
