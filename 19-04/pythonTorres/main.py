@@ -1,7 +1,10 @@
 from Manufacturer import Manufacturer
+from Engine import Engine
 
-manufacturer_1 = Manufacturer("Land Rover")
-valar = manufacturer_1.insert_car("Velar")
-evoque = manufacturer_1.insert_car("Evoque")
-engi
-manufacturer_1.list_cars()
+land_rover = Manufacturer("Land Rover")
+engine = Engine('2.0', 500.00)
+
+evoque = land_rover.insert_car("Evoque", engine.name)
+valar = land_rover.insert_car("Velar", engine.name)
+
+land_rover.list_cars()
